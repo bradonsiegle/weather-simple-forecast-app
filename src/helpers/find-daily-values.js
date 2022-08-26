@@ -54,6 +54,9 @@ const findDailyValues = (dayArray) => {
 	if (dayMostCommonIcon.icon === '') {
 		dayMostCommonIcon.icon = dayArray[0].weather[0].icon;
 	}
+	if (dayMostCommonWeather.weather === '') {
+		dayMostCommonWeather.weather = dayArray[0].weather[0].description;
+	}
 	return {
 		dayMax,
 		dayMin,
