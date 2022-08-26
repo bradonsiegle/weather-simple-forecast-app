@@ -1,0 +1,108 @@
+.nav {
+	height: 100vh;
+	width: 75%;
+	max-width: 75%;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	-webkit-transition: all 0.4s cubic-bezier(0.7, 0.1, 0.3, 0.9);
+	transition: all 0.4s cubic-bezier(0.7, 0.1, 0.3, 0.9);
+}
+
+.nav-hidden {
+	height: 100vh;
+	width: 10%;
+	max-width: 10%;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	right: -400px;
+	z-index: 20;
+	-webkit-transition: all 0.4s cubic-bezier(0.7, 0.1, 0.3, 0.9);
+	transition: all 0.4s cubic-bezier(0.7, 0.1, 0.3, 0.9);
+}
+
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 16px;
+	color: white;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+	background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+@media only screen and (min-width: 768px) {
+	.nav {
+		width: 50%;
+		max-width: 50%;
+	}
+	.nav-hidden {
+		width: 15%;
+		max-width: 15%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.nav {
+		width: 20%;
+		max-width: 20%;
+	}
+	.nav-hidden {
+		width: 15%;
+		max-width: 15%;
+	}
+}
