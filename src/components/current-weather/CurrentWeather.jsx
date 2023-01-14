@@ -51,7 +51,7 @@ const CurrentWeather = () => {
 		return (
 			<>
 				<div className='flex-col md:w-1/2 lg:w-1/5'>
-					<div className='flex justify-center md:justify-around items-center relative bottom-2 '>
+					<div className='flex justify-center md:justify-around items-center relative bottom-4'>
 						<h1 className='text-white text-8xl lg:text-[100px] -mt-9'>
 							{currentWeatherTemp}
 							<span className='relative text-5xl text-white bottom-8'>°</span>
@@ -60,9 +60,9 @@ const CurrentWeather = () => {
 						<Type
 							size={190}
 							style={{ color: 'white' }}
-							className=' -mr-5 p-0 '
+							className=' -mr-5 p-0 relative bottom-4'
 						/>
-						<p className='text-white text-[18px]  md:text-xl tracking-wide absolute bottom-10 left-1 md:left-6 capitalize'>
+						<p className='text-white text-[18px]  md:text-xl tracking-wide absolute bottom-8 left-1 md:left-6 capitalize'>
 							{currentWeatherDescription}
 						</p>
 					</div>
